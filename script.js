@@ -15,7 +15,16 @@ function handleSubmit(event){
 
     console.log(firstName, lastName, employeeID, employeeTitle, annualSalary);
 
-
+    tableBody.innerHTML += `
+    <tr>
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${employeeID}</td>
+        <td>${employeeTitle}</td>
+        <td>${annualSalary}</td>
+        <td><button>🆒</button></td>
+    </tr>
+    `
 
 //     tableBody.innerHTML +=
 //     `<tr>

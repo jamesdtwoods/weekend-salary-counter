@@ -9,12 +9,12 @@ table {
     vertical-align: middle;
 }
 
-td:nth-child(2) {
-    font-weight: bold;
-}
-
 .table-bordered th {
     padding: 20px 0;
     font-size: 18px;
     background: #dbdddd;
 }
+
+.submit-button {
+    background-color: #d1acf1;
+  }
