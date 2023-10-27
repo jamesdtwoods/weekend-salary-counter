@@ -14,14 +14,29 @@
     <h2>Add Employee</h2>
       <form onsubmit="handleSubmit(event)">
         <input
-          placeholder="To-Do Text"
+          placeholder="First Name"
           type="text"
-          id="todo-text"
+          id="first-name"
         >
         <input
-          placeholder="Author"
+          placeholder="Last Name"
           type="text"
-          id="todo-author"
+          id="last-name"
+        >
+        <input
+        placeholder="Employee ID"
+        type="text"
+        id="employee-id"
+        >
+        <input
+        placeholder="Employee Title"
+        type="text"
+        id="employee-title"
+        >
+        <input
+        placeholder="Annual Salary"
+        type="number"
+        id="annual-salary"
         >
         <button>Submit</button>
       </form>
@@ -29,17 +44,18 @@
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Year</th>
-            <th>Price</th>
-            <th>Avg. Review</th>
-            <th>Discount</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee ID</th>
+            <th>Employee Title</th>
+            <th>Annual Salary</th>
+            <th></th>
           </tr>
         </thead>
         <tbody id="content"></tbody>
           <tr>
               <td>
-                things
+                <!-- Employees will go here -->
               </td>
           </tr>
       </table>

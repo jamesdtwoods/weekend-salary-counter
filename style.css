@@ -1,0 +1,20 @@
+table {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.table-bordered, .table-bordered > td {
+    border-color: #565656;
+    vertical-align: middle;
+}
+
+td:nth-child(2) {
+    font-weight: bold;
+}
+
+.table-bordered th {
+    padding: 20px 0;
+    font-size: 18px;
+    background: #dbdddd;
+}
