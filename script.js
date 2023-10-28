@@ -24,6 +24,7 @@ function handleSubmit(event){
         document.getElementById('monthly-salary').textContent = monthySalary;
     } else {
         document.getElementById('monthly-salary').textContent = '';
+        document.getElementById('footer').className += 'over-budget';
         document.getElementById('monthly-salary-over').textContent = monthySalary;
     }
 
