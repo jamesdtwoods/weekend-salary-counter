@@ -1,6 +1,7 @@
 let monthySalary = 0;
 
 
+
 function handleSubmit(event){
     event.preventDefault();
 
@@ -16,7 +17,7 @@ function handleSubmit(event){
     document.getElementById('employee-title').value = ''
     document.getElementById('annual-salary').value = ''
 
-    console.log(firstName, lastName, employeeID, employeeTitle, annualSalary);
+    // console.log(firstName, lastName, employeeID, employeeTitle, annualSalary);
 
     monthySalary += (annualSalary / 12);
 
@@ -29,7 +30,7 @@ function handleSubmit(event){
     }
 
     
-
+// maybe need to have an id on the <tr> that is unique to the event to carry over to the remove function
     tableBody.innerHTML += `
     <tr>
         <td>${firstName}</td>
@@ -43,7 +44,15 @@ function handleSubmit(event){
 }
 
 function removeEmployee (event) {
+
+// // event target the employee's salary
+//     employeeAnnualSalary = document.querySelector("#tableBody")
+// // decrement monthly salary
+//     monthySalary -= (employeeannualSalary / 12);
+
     event.target.parentElement.parentElement.remove();
+
+    
 }
 
 
