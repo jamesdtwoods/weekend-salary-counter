@@ -46,7 +46,7 @@
         <button class="submit-button" data-testid="submitButton">Submit</button>
       </form>
     <h2>Employees</h2>
-      <table class="table table-bordered">
+      <table class="table">
         <thead>
           <tr>
             <th>First Name</th>
@@ -54,19 +54,18 @@
             <th>Employee ID</th>
             <th>Employee Title</th>
             <th>Annual Salary</th>
-            <th></th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
-          <tr>
-              <td>
-                <!-- Employees will go here -->
-              </td>
-          </tr>
       </table>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p>Total Monthly: 
+      <span id="monthly-salary"></span>
+      <span 
+      id="monthly-salary-over"
+      class="over-budget"></span>
+    </p>
   </footer>
 </body>
 </html>

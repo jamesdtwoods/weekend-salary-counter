@@ -1,3 +1,6 @@
+let monthySalary = 0;
+
+
 function handleSubmit(event){
     event.preventDefault();
 
@@ -15,6 +18,17 @@ function handleSubmit(event){
 
     console.log(firstName, lastName, employeeID, employeeTitle, annualSalary);
 
+    monthySalary += (annualSalary / 12);
+
+    if (monthySalary <= 20000){
+        document.getElementById('monthly-salary').textContent = monthySalary;
+    } else {
+        document.getElementById('monthly-salary').textContent = '';
+        document.getElementById('monthly-salary-over').textContent = monthySalary;
+    }
+
+    
+
     tableBody.innerHTML += `
     <tr>
         <td>${firstName}</td>
@@ -22,9 +36,17 @@ function handleSubmit(event){
         <td>${employeeID}</td>
         <td>${employeeTitle}</td>
         <td>${annualSalary}</td>
-        <td><button>🆒</button></td>
+        <td><button onclick="removeEmployee(event)">Delete Row</button></td>
     </tr>
     `
+}
+
+function removeEmployee (event) {
+    event.target.parentElement.parentElement.remove();
+}
+
+
+
 
 //     tableBody.innerHTML +=
 //     `<tr>
@@ -33,4 +55,3 @@ function handleSubmit(event){
 //     <td><button onclick="deleteAff(event)">🆒</button></td>
 //   </tr>`
   
-  }
