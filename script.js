@@ -23,8 +23,13 @@ function handleSubmit(event){
 
     // console.log(firstName, lastName, employeeID, employeeTitle, annualSalary);
 
+    // Should make annualSalary variable into number - all inputs get passed to js as string regardless of input type
     monthySalary += (annualSalary / 12);
 
+    // I made this when I was changing css based on two different spans, not the footer,
+    // could be simplified using .classlist.add('class-name')
+    // could also just select footer directly document.querySelector('footer'), 
+    // no need for footer it since it's the only one there'll ever be
     if (monthySalary <= 20000){
         document.getElementById('monthly-salary').textContent = USDollar.format(monthySalary);
     } else {
@@ -35,6 +40,10 @@ function handleSubmit(event){
 
     
 // maybe need to have an id on the <tr> that is unique to the event to carry over to the remove function
+
+// Matt created a variable called employee row with this formatting, 
+// so that all you had to was call that variable name
+// also to future proof add an id to tbody and call that
     tableBody.innerHTML += `
     <tr>
         <td>${firstName}</td>
