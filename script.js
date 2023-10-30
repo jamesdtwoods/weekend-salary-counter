@@ -1,4 +1,8 @@
 let monthySalary = 0;
+let USDollar = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+});
 
 
 
@@ -22,11 +26,11 @@ function handleSubmit(event){
     monthySalary += (annualSalary / 12);
 
     if (monthySalary <= 20000){
-        document.getElementById('monthly-salary').textContent = monthySalary;
+        document.getElementById('monthly-salary').textContent = USDollar.format(monthySalary);
     } else {
         document.getElementById('monthly-salary').textContent = '';
         document.getElementById('footer').className += 'over-budget';
-        document.getElementById('monthly-salary-over').textContent = monthySalary;
+        document.getElementById('monthly-salary-over').textContent = USDollar.format(monthySalary);
     }
 
     
@@ -37,8 +41,8 @@ function handleSubmit(event){
         <td>${lastName}</td>
         <td>${employeeID}</td>
         <td>${employeeTitle}</td>
-        <td>${annualSalary}</td>
-        <td><button onclick="removeEmployee(event)">Delete Row</button></td>
+        <td>$${annualSalary}</td>
+        <td><button class="remove-button" onclick="removeEmployee(event)">Delete Row</button></td>
     </tr>
     `
 }

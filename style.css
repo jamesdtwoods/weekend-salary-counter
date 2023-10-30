@@ -1,14 +1,88 @@
-table, th, td {
+/* Original */
+
+/* table, th, td {
     margin-top: 50px;
     font-size: 18px;
     text-align: center;
-    border: 1px solid;
+    border: 2px dotted;
 }
 
+th, td {
+    padding: 1%;
+} */
+
+/* 
+
+source: https://codepen.io/alexerlandsson/pen/mPWgpO 
+
+*/
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+table {
+	width: 800px;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+} 
+
+
+
+
 .submit-button {
-    background-color: #d1acf1;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+  }
+
+.remove-button {
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
   }
 
 .over-budget {
     color: red;
+    border: 2px solid;
+    border-color: red;
 }
