@@ -41,7 +41,7 @@ function handleSubmit(event){
         <td>${lastName}</td>
         <td>${employeeID}</td>
         <td>${employeeTitle}</td>
-        <td>$${annualSalary}</td>
+        <td>${USDollar.format(annualSalary)}</td>
         <td><button class="remove-button" onclick="removeEmployee(event)">Delete Row</button></td>
     </tr>
     `
@@ -54,18 +54,6 @@ function removeEmployee (event) {
 // // decrement monthly salary
 //     monthySalary -= (employeeannualSalary / 12);
 
-    event.target.parentElement.parentElement.remove();
-
-    
+    event.target.parentElement.parentElement.remove();   
 }
-
-
-
-
-//     tableBody.innerHTML +=
-//     `<tr>
-//     <td>${affirmation}</td>
-//     <td>${author}</td>
-//     <td><button onclick="deleteAff(event)">🆒</button></td>
-//   </tr>`
   
